@@ -1,18 +1,17 @@
 def indexOfLongest():
 
-    strlist = []
+    strlist = ["cmpt", "120", "!"]
+    max_index = 0
+    largest = strlist[0]
 
-    string = input("Enter a string(y to stop): ")
-    while string != "y":
-        string = input("Enter a string: ")   
-        strlist.append(string)
-     
-    for char in string:
-        if char == " " or char == "y":
-            return None
-        else:
-            longest = max(strlist) 
-            print(strlist.index(longest))
-            
+    if len(strlist) == 0:
+        return 0
+
+    for i in range(1, len(strlist)):
+        if len(strlist[i]) > len(strlist[i-1]):
+            largest = strlist[i]
+            max_index = i
+    
+    return max_index
         
 indexOfLongest()
