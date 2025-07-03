@@ -1,4 +1,5 @@
-def longest_duplicates(nums):
+def longest_duplicates():
+    nums = [1, 3, 3, 7, 8, 8, 8, 20 ,20, 30]
     max_count = 1
     count = 1
 
@@ -12,5 +13,5 @@ def longest_duplicates(nums):
 
     return max_count
 
-nums = [1, 3, 3, 7, 8, 8, 8, 20 ,20, 30]
-print(longest_duplicates(nums))
+
+print(longest_duplicates())
